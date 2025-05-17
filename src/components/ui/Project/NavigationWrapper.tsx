@@ -54,6 +54,7 @@ export function NavigationWrapper({ images }: { images: StaticImageData[] }) {
           <>
             <Arrow
               left
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
               onClick={(e: any) =>
                 e.stopPropagation() || instanceRef.current?.prev()
               }
@@ -61,6 +62,7 @@ export function NavigationWrapper({ images }: { images: StaticImageData[] }) {
             />
 
             <Arrow
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
               onClick={(e: any) =>
                 e.stopPropagation() || instanceRef.current?.next()
               }
@@ -96,6 +98,7 @@ export function NavigationWrapper({ images }: { images: StaticImageData[] }) {
 function Arrow(props: {
   disabled: boolean
   left?: boolean
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   onClick: (e: any) => void
 }) {
   const disabled = props.disabled ? ' arrow--disabled' : ''

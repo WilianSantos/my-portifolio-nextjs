@@ -1,4 +1,3 @@
-// components/ContactForm.tsx
 'use client'
 
 import { Formik, Form, Field, ErrorMessage } from 'formik'
@@ -43,7 +42,7 @@ export function ContactForm() {
             setError(null)
             resetForm()
           } catch (err) {
-            setError('Erro ao enviar o formulário')
+            setError(`Erro ao enviar o formulário: ${err}`)
           }
         }}
       >
