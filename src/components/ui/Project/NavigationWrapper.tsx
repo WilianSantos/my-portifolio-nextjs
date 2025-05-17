@@ -45,7 +45,7 @@ export function NavigationWrapper({ images }: { images: StaticImageData[] }) {
               <Image
                 src={item}
                 alt="Imagem do projeto"
-                className="w-full object-cover h-[150px] sm:h-[280px] md:h-[350px] lg:h-[400px]"
+                className="w-full object-cover h-[150px] sm:h-[280px] md:h-[330px] lg:h-[400px]"
               />
             </div>
           ))}
