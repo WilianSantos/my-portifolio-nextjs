@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Rubik, Nunito } from 'next/font/google'
 import './globals.css'
+import { Sidebar } from '@/components/Sidebar'
 
 const nunito = Nunito({
   variable: '--font-nunito',
@@ -30,7 +31,10 @@ export default function RootLayout({
       <body
         className={`${nunito.variable} ${rubik.variable} antialiased text-white bg-gray-500 font-nunito`}
       >
-        {children}
+        <div className="flex">
+          <Sidebar />
+          {children}
+        </div>
       </body>
     </html>
   )

@@ -1,17 +1,18 @@
 'use client'
 
 import Image from 'next/image'
-import { Typewriter } from 'react-simple-typewriter'
-
-import profileImage from '@/assets/images/foto.jpg'
 import Link from 'next/link'
 import { Icon } from '@iconify/react'
+import { Typewriter } from 'react-simple-typewriter'
+
 import { Button } from './ui/Button'
+
+import profileImage from '@/assets/images/foto.jpg'
 
 export function Banner() {
   return (
     <section
-      id="about"
+      id="banner"
       className="h-screen flex w-full items-center justify-between border-b-1 border-gray-300 overflow-hidden"
     >
       <div className="text-lg max-w-8/12 w-full flex flex-col gap-3">
@@ -33,16 +34,16 @@ export function Banner() {
           <span className="text-green-600">back-end</span> para web.
         </p>
         <div className="flex w-1/2 justify-between gap-2.5">
-          <Button>
+          <Button isGreen>
             <Link href="#skills" className="flex gap-2.5">
-              <Icon icon="mdi:text-account" width={20} height={20} />
-              Resumo
+              <Icon icon="prime:arrow-right" className="h-7 w-7" />
+              Projetos
             </Link>
           </Button>
           <Button>
-            <Link href="#skills" className="flex gap-2.5">
-              <Icon icon="mdi:briefcase" width={20} height={20} />
-              Projetos
+            <Link href="/resume" className="flex gap-2.5">
+              <Icon icon="mdi:text-account" className="h-7 w-7" />
+              Resumo
             </Link>
           </Button>
         </div>

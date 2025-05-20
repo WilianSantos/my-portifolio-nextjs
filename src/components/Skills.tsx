@@ -1,6 +1,7 @@
 import { Icon } from '@iconify/react'
-import { Card } from './ui/Card'
 import Link from 'next/link'
+
+import { Card } from './ui/Card'
 
 export function Skills() {
   return (
@@ -14,9 +15,8 @@ export function Skills() {
       <div>
         <p className="text-lg">
           Aqui esta um pouco das minhas habilidades. Confira meu{' '}
-          <Link href="#resume" className="text-green-600">
+          <Link href="/resume" className="text-green-600">
             currículo online
-            {/* TODO:Gerar link para resumo */}
           </Link>
           .
         </p>

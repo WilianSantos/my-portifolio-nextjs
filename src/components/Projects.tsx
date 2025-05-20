@@ -11,7 +11,7 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="pb-30 mt-30 border-b-1 border-gray-300 flex flex-col items-start gap-5"
+      className="pb-30 mt-30 flex flex-col items-start gap-5"
     >
       <h3 className="text-5xl font-extrabold border-l-4 mb-3 pl-2 border-green-400">
         Projetos

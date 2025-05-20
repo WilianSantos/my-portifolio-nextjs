@@ -21,14 +21,14 @@ export function Sidebar() {
           <li>
             <Link href="https://www.linkedin.com/in/wilian-soares-dos-santos-115328124">
               <div className="border-1 text-green-400 hover:text-white border-gray-200 p-2 rounded-full hover:border-green-400 hover:bg-green-400">
-                <Icon icon="mdi:linkedin" width={15} height={15} />
+                <Icon icon="mdi:linkedin" className="w-5 h-5" />
               </div>
             </Link>
           </li>
           <li>
             <Link href="https://github.com/WilianSantos">
               <div className="border-1 text-green-400 hover:text-white border-gray-200 p-2 rounded-full hover:border-green-400 hover:bg-green-400">
-                <Icon icon="mdi:github" width={15} height={15} />
+                <Icon icon="mdi:github" className="w-5 h-5" />
               </div>
             </Link>
           </li>
@@ -39,10 +39,10 @@ export function Sidebar() {
         <ul className="flex h-full flex-col text-gray-100 text-base justify-between gap-1">
           <li>
             <Link
-              href="#about"
+              href="/"
               className="flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md"
             >
-              <Icon icon="mdi:account" width={20} height={20} />
+              <Icon icon="mdi:account" className="w-8 h-8" />
               Sobre
             </Link>
           </li>
@@ -52,7 +52,7 @@ export function Sidebar() {
               href="#projects"
               className="flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md"
             >
-              <Icon icon="mdi:folder-open" width={20} height={20} />
+              <Icon icon="mdi:folder-open" className="w-8 h-8" />
               Projetos
             </Link>
           </li>
@@ -61,7 +61,7 @@ export function Sidebar() {
               href="#skills"
               className="flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md"
             >
-              <Icon icon="mdi:tools" width={20} height={20} />
+              <Icon icon="mdi:tools" className="w-8 h-8" />
               Habilidades
             </Link>
           </li>
@@ -70,7 +70,7 @@ export function Sidebar() {
               href="#skills"
               className="flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md"
             >
-              <Icon icon="mdi:text-account" width={20} height={20} />
+              <Icon icon="mdi:text-account" className="w-8 h-8" />
               Resumo
             </Link>
           </li>
@@ -80,7 +80,7 @@ export function Sidebar() {
               href="#contact"
               className="flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md"
             >
-              <Icon icon="mdi:email" width={20} height={20} />
+              <Icon icon="mdi:email" className="w-8 h-8" />
               Contato
             </Link>
           </li>
