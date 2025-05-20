@@ -1,23 +1,20 @@
 import { Contact } from '@/components/Contact'
 import { Footer } from '@/components/Footer'
-import { Header } from '@/components/Header'
-import { Hero } from '@/components/Hero'
+import { Banner } from '@/components/Banner'
 import { Projects } from '@/components/Projects'
+import { Sidebar } from '@/components/Sidebar'
 import { Skills } from '@/components/Skills'
 
 export default function Home() {
   return (
-    <>
-      <Header />
-      <main className="p-6">
-        <div className="max-w-5xl mr-auto ml-auto w-full pt-24">
-          <Hero />
-          <Projects />
-          <Skills />
-          <Contact />
-        </div>
+    <div className="flex">
+      <Sidebar />
+      <main className="h-screen w-full overflow-y-scroll pr-2.5 pl-2.5 pt-10 pb-10">
+        <Banner />
+        <Skills />
+        <Projects />
+        <Footer />
       </main>
-      <Footer />
-    </>
+    </div>
   )
 }

@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${nunito.variable} ${rubik.variable} antialiased text-gray-950 font-nunito`}
+        className={`${nunito.variable} ${rubik.variable} antialiased text-white bg-gray-500 font-nunito`}
       >
         {children}
       </body>

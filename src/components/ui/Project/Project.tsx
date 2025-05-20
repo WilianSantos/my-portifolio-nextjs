@@ -1,46 +1,49 @@
-import { StaticImageData } from 'next/image'
+'use client'
+
+import Image, { StaticImageData } from 'next/image'
 import { Icon } from '@iconify/react'
 
 import { Tag } from '../Tag'
-import { NavigationWrapper } from './NavigationWrapper'
 import Link from 'next/link'
+import { useState } from 'react'
 
 type PropsProject = {
   title: string
-  images: StaticImageData[]
-  children: React.ReactNode
+  image: StaticImageData
   tags: string[]
-  githubLink: string
 }
 
-export function Project({
-  title,
-  children,
-  githubLink,
-  images,
-  tags
-}: PropsProject) {
+export function Project({ title, image, tags }: PropsProject) {
+  const [hovering, setHovering] = useState(false)
   return (
-    <div className="w-full border-gray-300 border-2 p-4 flex flex-col items-center justify-center gap-5">
-      <h4 className="text-2xl">{title}</h4>
-      <div className="w-full">
-        <NavigationWrapper images={images.map((item) => item)} />
+    <div className="w-full flex flex-col items-start gap-8">
+      <div className="hover:border-green-400 border-1 border-gray-500 p-2">
+        <Image
+          className="w-full h-auto object-cover"
+          src={image}
+          alt={`Foto principal - ${title}`}
+        />
       </div>
-      <div className="p-6 text-sm text-gray-950">{children}</div>
-      <div className="flex items-center justify-start flex-flex-wrap gap-1">
+      <div className="flex items-center justify-start flex-wrap gap-2">
         {tags.map((item) => (
           <Tag key={item} name={item} />
         ))}
       </div>
-      <div className="flex items-center">
+      <button className="flex items-center text-xl font-extrabold">
+        {title}
         <Link
-          href={githubLink}
-          className="flex items-center gap-2 hover:underline hover:text-blue-400"
+          href="#projects"
+          onMouseEnter={() => setHovering(true)}
+          onMouseLeave={() => setHovering(!hovering)}
+          className="flex items-center justify-center h-15 w-15 ml-4 bg-gray-300 hover:bg-green-400 duration-700 ease-in-out rounded-full"
         >
-          GitHub
-          <Icon icon="logos:github-icon" width={20} height={20} />
+          {hovering ? (
+            <Icon icon="prime:arrow-right" className="w-7 h-7" />
+          ) : (
+            <Icon icon="prime:arrow-up-right" className="h-7 w-7" />
+          )}
         </Link>
-      </div>
+      </button>
     </div>
   )
 }

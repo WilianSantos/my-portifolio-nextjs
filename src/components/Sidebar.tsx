@@ -1,0 +1,91 @@
+import Image from 'next/image'
+import Link from 'next/link'
+import { Icon } from '@iconify/react'
+
+import image from '@/assets/images/foto.jpg'
+
+export function Sidebar() {
+  return (
+    <div className="flex flex-col p-6 bg-gray-300 h-screen max-w-2xs w-full">
+      <div className="flex flex-col items-center gap-4 pb-10 border-b-1 border-gray-200">
+        <Image
+          src={image}
+          alt="Foto de perfil"
+          className="rounded-full object-cover w-20 h-20"
+        />
+        <div className="text-white">
+          <h2 className="text-2xl">Wilian S. Santos</h2>
+          <p className="text-sm">Desenvolvedor Full Stack</p>
+        </div>
+        <ul className="flex items-center justify-between gap-4">
+          <li>
+            <Link href="https://www.linkedin.com/in/wilian-soares-dos-santos-115328124">
+              <div className="border-1 text-green-400 hover:text-white border-gray-200 p-2 rounded-full hover:border-green-400 hover:bg-green-400">
+                <Icon icon="mdi:linkedin" width={15} height={15} />
+              </div>
+            </Link>
+          </li>
+          <li>
+            <Link href="https://github.com/WilianSantos">
+              <div className="border-1 text-green-400 hover:text-white border-gray-200 p-2 rounded-full hover:border-green-400 hover:bg-green-400">
+                <Icon icon="mdi:github" width={15} height={15} />
+              </div>
+            </Link>
+          </li>
+        </ul>
+      </div>
+
+      <nav className="pt-10 pb-10">
+        <ul className="flex h-full flex-col text-gray-100 text-base justify-between gap-1">
+          <li>
+            <Link
+              href="#about"
+              className="flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md"
+            >
+              <Icon icon="mdi:account" width={20} height={20} />
+              Sobre
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              href="#projects"
+              className="flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md"
+            >
+              <Icon icon="mdi:folder-open" width={20} height={20} />
+              Projetos
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="#skills"
+              className="flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md"
+            >
+              <Icon icon="mdi:tools" width={20} height={20} />
+              Habilidades
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="#skills"
+              className="flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md"
+            >
+              <Icon icon="mdi:text-account" width={20} height={20} />
+              Resumo
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              href="#contact"
+              className="flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md"
+            >
+              <Icon icon="mdi:email" width={20} height={20} />
+              Contato
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  )
+}

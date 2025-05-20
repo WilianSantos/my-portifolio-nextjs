@@ -1,31 +1,48 @@
+import Link from 'next/link'
+import { Icon } from '@iconify/react'
+
 import { Project } from './ui/Project/Project'
+import { Button } from './ui/Button'
 
 import praiseApi from '@/assets/images/preise-api/praise-api.png'
-
-import pageLogin from '@/assets/images/praise-site/page-login.png'
 import pageDashboard from '@/assets/images/praise-site/page-dashboard.png'
-import pageMusics from '@/assets/images/praise-site/page-musics.png'
-import pageProfile from '@/assets/images/praise-site/page-profile.png'
-import pageCategory from '@/assets/images/praise-site/page-categorys.png'
-import pageFunction from '@/assets/images/praise-site/page-functions.png'
-import pageMember from '@/assets/images/praise-site/page-membros.png'
-import pagePlaylist from '@/assets/images/praise-site/page-playlist.png'
-import pageScale from '@/assets/images/praise-site/page-scales.png'
-
-import pageHome from '@/assets/images/efood/page-home.png'
-import pageRestaurant from '@/assets/images/efood/page-restaurant.png'
-import pageRestaurantAdd from '@/assets/images/efood/page-restaurant-add.png'
-import pageRestaurantModal from '@/assets/images/efood/page-restaurant-modal.png'
 
 export function Projects() {
   return (
     <section
       id="projects"
-      className="mt-5 mt-60 pt-10 pb-10 flex flex-col items-center justify-center gap-5"
+      className="pb-30 mt-30 border-b-1 border-gray-300 flex flex-col items-start gap-5"
     >
-      <h3 className="text-3xl font-rubik font-extrabold mb-7">Projetos</h3>
-      <div className="flex flex-col items-center gap-5 w-full">
+      <h3 className="text-5xl font-extrabold border-l-4 mb-3 pl-2 border-green-400">
+        Projetos
+      </h3>
+      <div className="flex items-center justify-between text-lg w-full">
+        <p className="w-full">Aqui estão alguns projetos desenvolvidos.</p>
+        {/* TODO: Link para PAGE Projects */}
+        <div className="w-1/3">
+          <Button isGreen>
+            <Link
+              href="#projects"
+              className="w-full gap-2 flex items-center justify-center"
+            >
+              <Icon icon="prime:arrow-right" className="h-7 w-7" />
+              Projetos
+            </Link>
+          </Button>
+        </div>
+      </div>
+      <div className="grid grid-cols-2 gap-6 w-full">
         <Project
+          title="Sistema de Gerenciamento do Louvor (API)"
+          tags={['Python', 'Django', 'Django REST framework', 'Docker']}
+          image={praiseApi}
+        />
+        <Project
+          title="Sistema de Gerenciamento do Louvor (SITE)"
+          tags={['Next.js', 'TailwindCSS', 'React Query', 'Orval']}
+          image={pageDashboard}
+        />
+        {/* <Project
           title="Sistema de Gerenciamento do Louvor (API)"
           tags={['Python', 'Django', 'Django REST framework', 'Docker']}
           images={[praiseApi]}
@@ -162,7 +179,7 @@ export function Projects() {
             carinho de compras e no carinhos de compras ele pode seguir o seu
             pedido.
           </p>
-        </Project>
+        </Project> */}
       </div>
     </section>
   )
