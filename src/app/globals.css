@@ -7,13 +7,17 @@
 
   --color-gray-100: #E4EEDD;
   --color-gray-200: #616161;
+  --color-gray-250: #878787;
   --color-gray-300: #4F4F4F;
   --color-gray-400: #3A3A3A;
   --color-gray-500: #292929;
 
-
   --color-green-400: #54B689;
   --color-green-600: #43956D;
+
+  --color-bule-400: #8295B4;
+
+  --color-red-500: #fb1808;
 }
 
 body {

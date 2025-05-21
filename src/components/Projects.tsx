@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Icon } from '@iconify/react'
 
-import { Project } from './ui/Project/Project'
+import { Project } from './ui/Project'
 import { Button } from './ui/Button'
 
 import praiseApi from '@/assets/images/preise-api/praise-api.png'
@@ -17,9 +17,9 @@ export function Projects() {
         Projetos
       </h3>
       <div className="flex items-center justify-between text-lg w-full">
-        <p className="w-full">Aqui estão alguns projetos desenvolvidos.</p>
+        <p>Aqui estão alguns projetos desenvolvidos.</p>
         {/* TODO: Link para PAGE Projects */}
-        <div className="w-1/3">
+        <div className="mr-5">
           <Button isGreen>
             <Link
               href="#projects"

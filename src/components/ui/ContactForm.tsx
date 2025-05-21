@@ -3,10 +3,15 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 import { useState } from 'react'
+import { Button } from './Button'
 
 // Validação com Yup
 const ContactSchema = Yup.object().shape({
   name: Yup.string().required('O nome é obrigatório'),
+  tell: Yup.string().matches(
+    /^\d{11}$/,
+    'Celular deve ter 11 dígitos numéricos'
+  ),
   email: Yup.string()
     .email('E-mail inválido')
     .required('O e-mail é obrigatório'),
@@ -18,13 +23,14 @@ export function ContactForm() {
   const [error, setError] = useState<string | null>(null)
 
   return (
-    <div className="w-full p-6 bg-white rounded shadow space-y-4">
+    <div className="w-full p-6 rounded border-1 border-gray-200 shadow space-y-4">
       <h2 className="text-2xl font-semibold mb-4">Entre em contato</h2>
 
       <Formik
-        initialValues={{ name: '', email: '', message: '' }}
+        initialValues={{ name: '', email: '', message: '', tell: '' }}
         validationSchema={ContactSchema}
         onSubmit={async (values, { resetForm }) => {
+          console.log('Formik values:', values)
           try {
             const response = await fetch('/api/contact', {
               method: 'POST',
@@ -47,31 +53,46 @@ export function ContactForm() {
         }}
       >
         {({ isSubmitting }) => (
-          <Form className="space-y-4 flex flex-col items-end">
-            {error && <p className="text-red-600 text-sm mt-2">{error}</p>}
-            <div className="w-full">
-              <Field
-                type="text"
-                name="name"
-                placeholder="Seu nome"
-                className="w-full p-2 border border-gray-300 rounded"
-              />
-              <ErrorMessage
-                name="name"
-                component="div"
-                className="text-red-500 text-sm mt-1"
-              />
-            </div>
+          <Form className="space-y-4 flex flex-col items-start text-bule-400">
+            {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
+            <div className="flex items-center justify-between gap-5 w-full">
+              <div className="w-full">
+                <Field
+                  type="text"
+                  name="name"
+                  placeholder="Seu nome"
+                  className="w-full p-2 border border-gray-200 rounded"
+                />
+                <ErrorMessage
+                  name="name"
+                  component="div"
+                  className="text-red-500 text-sm mt-1"
+                />
+              </div>
 
-            <div className="w-full">
+              <div className="w-full">
+                <Field
+                  type="email"
+                  name="email"
+                  placeholder="Seu e-mail"
+                  className="w-full p-2 border border-gray-300 rounded"
+                />
+                <ErrorMessage
+                  name="email"
+                  component="div"
+                  className="text-red-500 text-sm mt-1"
+                />
+              </div>
+            </div>
+            <div className="w-1/3">
               <Field
-                type="email"
-                name="email"
-                placeholder="Seu e-mail"
+                type="tel"
+                name="tell"
+                placeholder="Seu telefone"
                 className="w-full p-2 border border-gray-300 rounded"
               />
               <ErrorMessage
-                name="email"
+                name="tell"
                 component="div"
                 className="text-red-500 text-sm mt-1"
               />
@@ -91,14 +112,11 @@ export function ContactForm() {
                 className="text-red-500 text-sm mt-1"
               />
             </div>
-
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="px-4 py-2 w-1/2 cursor-pointer bg-blue-950 text-white rounded hover:bg-blue-900 disabled:opacity-50"
-            >
-              {isSubmitting ? 'Enviando...' : 'Enviar'}
-            </button>
+            <div>
+              <Button type="submit" isGreen>
+                {isSubmitting ? 'Enviando...' : 'Enviar mensagem'}
+              </Button>
+            </div>
 
             {success && (
               <p className="text-green-600 text-sm mt-2">

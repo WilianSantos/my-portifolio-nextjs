@@ -4,10 +4,12 @@ import { useRef } from 'react'
 
 export function Button({
   children,
-  isGreen = false
+  isGreen = false,
+  type = 'button'
 }: {
   children: React.ReactNode
   isGreen?: boolean
+  type?: 'button' | 'submit' | 'reset' | undefined
 }) {
   const spanRef = useRef<HTMLSpanElement>(null)
   const buttonRef = useRef<HTMLButtonElement>(null)
@@ -42,6 +44,7 @@ export function Button({
 
   return (
     <button
+      type={type}
       ref={buttonRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
@@ -51,7 +54,7 @@ export function Button({
         min-w-[120px]
         text-white text-[16px] font-medium
         rounded-full tracking-wide
-        ${isGreen ? 'bg-green-400' : 'bg-gray-300'} transition-all duration-700 cursor-pointer w-full p-5`}
+        ${isGreen ? 'bg-green-400' : 'bg-gray-300'} transition-all duration-700 cursor-pointer w-full p-3`}
     >
       {children}
       <span

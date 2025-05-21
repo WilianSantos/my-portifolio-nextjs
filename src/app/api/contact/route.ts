@@ -5,7 +5,7 @@ import type SMTPTransport from 'nodemailer/lib/smtp-transport'
 
 export async function POST(req: Request) {
   const body = await req.json()
-  const { name, email, message } = body
+  const { name, email, message, tell } = body
 
   if (!name || !email || !message) {
     return NextResponse.json(
@@ -31,7 +31,7 @@ export async function POST(req: Request) {
     await transporter.sendMail({
       from: `${name} <${email}>`,
       to: process.env.EMAIL_USER,
-      subject: 'Mensagem do Portfólio',
+      subject: `Mensagem do Portfólio de ${name} | ${tell}`,
       text: message
     })
 

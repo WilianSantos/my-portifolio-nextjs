@@ -3,7 +3,7 @@
 import Image, { StaticImageData } from 'next/image'
 import { Icon } from '@iconify/react'
 
-import { Tag } from '../Tag'
+import { Tag } from './Tag'
 import Link from 'next/link'
 import { useState } from 'react'
 
@@ -17,9 +17,9 @@ export function Project({ title, image, tags }: PropsProject) {
   const [hovering, setHovering] = useState(false)
   return (
     <div className="w-full flex flex-col items-start gap-8">
-      <div className="hover:border-green-400 border-1 border-gray-500 p-2">
+      <div className="hover:border-green-400 border-1 border-gray-500 p-3">
         <Image
-          className="w-full h-auto object-cover"
+          className="w-full h-auto object-cover "
           src={image}
           alt={`Foto principal - ${title}`}
         />
@@ -30,7 +30,7 @@ export function Project({ title, image, tags }: PropsProject) {
         ))}
       </div>
       <button className="flex items-center text-xl font-extrabold">
-        {title}
+        <span className="hover:text-green-400">{title}</span>
         <Link
           href="#projects"
           onMouseEnter={() => setHovering(true)}

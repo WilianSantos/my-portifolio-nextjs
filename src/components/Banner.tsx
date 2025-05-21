@@ -35,7 +35,7 @@ export function Banner() {
         </p>
         <div className="flex w-1/2 justify-between gap-2.5">
           <Button isGreen>
-            <Link href="#skills" className="flex gap-2.5">
+            <Link href="/projects" className="flex gap-2.5">
               <Icon icon="prime:arrow-right" className="h-7 w-7" />
               Projetos
             </Link>

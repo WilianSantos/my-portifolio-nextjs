@@ -49,25 +49,17 @@ export function Sidebar() {
 
           <li>
             <Link
-              href="#projects"
+              href="/projects"
               className="flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md"
             >
               <Icon icon="mdi:folder-open" className="w-8 h-8" />
               Projetos
             </Link>
           </li>
+
           <li>
             <Link
-              href="#skills"
-              className="flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md"
-            >
-              <Icon icon="mdi:tools" className="w-8 h-8" />
-              Habilidades
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="#skills"
+              href="/resume"
               className="flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md"
             >
               <Icon icon="mdi:text-account" className="w-8 h-8" />
@@ -77,7 +69,7 @@ export function Sidebar() {
 
           <li>
             <Link
-              href="#contact"
+              href="/contact"
               className="flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md"
             >
               <Icon icon="mdi:email" className="w-8 h-8" />
