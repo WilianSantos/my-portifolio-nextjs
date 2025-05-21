@@ -6,8 +6,8 @@ import image from '@/assets/images/foto.jpg'
 
 export function Sidebar() {
   return (
-    <div className="flex flex-col p-6 bg-gray-300 h-screen max-w-2xs w-full">
-      <div className="flex flex-col items-center gap-4 pb-10 border-b-1 border-gray-200">
+    <div className="absolute z-20 lg:relative top-0 right-0 left-0 flex flex-col justify-center lg:justify-start p-6 border-t-2 border-gray-200 bg-gray-500 lg:bg-gray-300 h-20 lg:h-screen lg:max-w-2xs w-full">
+      <div className="lg:flex flex-col items-center gap-4 pb-10 border-b-1 border-gray-200 hidden md:hidden sm:hidden">
         <Image
           src={image}
           alt="Foto de perfil"
@@ -36,8 +36,8 @@ export function Sidebar() {
       </div>
 
       <nav className="pt-10 pb-10">
-        <ul className="flex h-full flex-col text-gray-100 text-base justify-between gap-1">
-          <li>
+        <ul className="flex flex-row lg:h-full lg:flex-col text-gray-100 text-base justify-between gap-1">
+          <li className="hidden sm:hidden md:block lg:block">
             <Link
               href="/"
               className="flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md"
@@ -46,8 +46,16 @@ export function Sidebar() {
               Sobre
             </Link>
           </li>
+          <li className="block sm:block md:hidden lg:hidden">
+            <Link
+              href="/"
+              className="flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md"
+            >
+              <Icon icon="mdi:account" className="w-8 h-8" />
+            </Link>
+          </li>
 
-          <li>
+          <li className="hidden sm:hidden md:block lg:block">
             <Link
               href="/projects"
               className="flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md"
@@ -56,8 +64,16 @@ export function Sidebar() {
               Projetos
             </Link>
           </li>
+          <li className="block sm:block md:hidden lg:hidden">
+            <Link
+              href="/projects"
+              className="flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md"
+            >
+              <Icon icon="mdi:folder-open" className="w-8 h-8" />
+            </Link>
+          </li>
 
-          <li>
+          <li className="hidden sm:hidden md:block lg:block">
             <Link
               href="/resume"
               className="flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md"
@@ -66,14 +82,30 @@ export function Sidebar() {
               Resumo
             </Link>
           </li>
+          <li className="block sm:block md:hidden lg:hidden">
+            <Link
+              href="/resume"
+              className="flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md"
+            >
+              <Icon icon="mdi:text-account" className="w-8 h-8" />
+            </Link>
+          </li>
 
-          <li>
+          <li className="hidden sm:hidden md:block lg:block">
             <Link
               href="/contact"
               className="flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md"
             >
               <Icon icon="mdi:email" className="w-8 h-8" />
               Contato
+            </Link>
+          </li>
+          <li className="block sm:block md:hidden lg:hidden">
+            <Link
+              href="/contact"
+              className="flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md"
+            >
+              <Icon icon="mdi:email" className="w-8 h-8" />
             </Link>
           </li>
         </ul>

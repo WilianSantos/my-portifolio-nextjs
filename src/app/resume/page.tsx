@@ -9,7 +9,7 @@ import ProfileImage from '@/assets/images/foto.jpg'
 
 export default function Resume() {
   return (
-    <main className="h-screen overflow-y-scroll pr-2.5 pl-2.5 pt-10 pb-10 w-full">
+    <main className="h-screen mt-20 lg:mt-0 overflow-y-scroll pr-2.5 pl-2.5 pt-10 pb-10 w-full">
       <div className="flex flex-col items-center justify-center">
         <div className="flex flex-col items-center justify-center p-5 pb-10">
           <h3 className="text-2xl mb-3">Currículo Online</h3>
@@ -23,50 +23,57 @@ export default function Resume() {
             </Link>
           </Button>
         </div>
-        <div className="flex flex-col items-center justify-center rounded-3xl p-10 border-t-1 border-gray-200 bg-gray-300 w-full text-lg">
-          <div className="flex items-center p-5 justify-between w-full border-b-1 border-gray-200">
+        <div className="flex flex-col items-center justify-center rounded-3xl p-10 border-t-1 border-gray-200 bg-gray-300 w-full text-base lg:text-lg">
+          <div className="flex items-center flex-col md:flex-row lg:flex-row p-5 justify-between w-full border-b-1 border-gray-200">
             <div>
-              <h2 className="text-green-400 font-extrabold text-5xl">
+              <h2 className="text-green-400 font-extrabold text-5xl hidden sm:hidden md:hidden lg:block">
                 Wilian Soares dos Santos
               </h2>
-              <p className="font-bold text-2xl mt-3">
+              <h2 className="text-green-400 font-extrabold text-3xl block lg:hidden">
+                Wilian Soares dos Santos
+              </h2>
+              <p className="font-bold text-2xl mt-3 hidden sm:hidden md:hidden lg:block">
+                Desenvolvedor Full-Stack Python
+              </p>
+              <p className="font-bold text-xl mt-3 block lg:hidden">
                 Desenvolvedor Full-Stack Python
               </p>
             </div>
 
-            <div className="flex flex-col items-start gap-3 p-5 border-l-1 border-gray-100">
+            <div className="flex flex-col mt-3 md:mt-0 lg:mt-0 items-start gap-3 p-5 border-l-1 border-gray-100">
               <p>+55 (19) 97133-0046</p>
               <p>wilian.santos.dev@outlook.com</p>
               <p>Artur Nogueira, SP, Brasil</p>
             </div>
           </div>
 
-          <div className="flex items-center justify-between w-full border-b-1 border-gray-200">
+          <div className="flex flex-col mt-3 lg:mt-0 md:mt-0 md:flex-row lg:flex-row items-center justify-between w-full border-b-1 border-gray-200">
             <Image
               src={ProfileImage}
               alt="Foto do perfil"
               className="w-50 h-50 object-cover rounded-full"
             />
-            <div className="w-10/12 ml-3 p-5">
+            <div className="w-full md:w-10/12 lg:w-10/12 mt-3 md:ml-3 lg:ml-3 lg:p-5">
               <p>
                 Especializado em aplicações front-end e back-end para web. Sou
-                programador a 2 anos, não tenho experiencia profissional na área
-                de programação até agora tenho me dedicado aos estudos e a
+                estudante de programação a mais de 2 anos, não tenho experiencia
+                profissional com programação, tenho me dedicado aos estudos e a
                 pratica com projetos acadêmicos. Atualmente estou cursando
-                Desenvolvedor Full Stack Python, um curso profissionalizante e
-                estou no 3° semestre de Análise e Desenvolvimento de Sistemas,
-                em meus estudos desenvolve habilidades de como programar de
-                forma limpa, sempre aplicando as boas práticas da comunidade.
-                Sou cristão, baterista e um pouco geek, meus hobbies se dividem
-                em ouvir músicas, ler mangas, assistir animes e ler livros.
+                Desenvolvedor Full Stack Python, um curso profissionalizante
+                também estou no 3° semestre de Análise e Desenvolvimento de
+                Sistemas, em meus estudos desenvolve habilidades de como
+                programar de forma limpa, sempre aplicando as boas práticas da
+                comunidade. Sou cristão, baterista e um pouco geek, meus hobbies
+                se dividem em ouvir músicas, ler mangas, assistir animes e ler
+                livros.
               </p>
             </div>
           </div>
 
-          <div className="grid grid-cols-2 p-10 border-b-1 border-gray-200 w-full">
-            <div className="flex flex-col items-start border-r-1 border-gray-100 p-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 p-10 border-b-1 border-gray-200 w-full">
+            <div className="flex flex-col items-start md:p-5 lg:p-5">
               <div className="mb-10">
-                <h4 className="text-green-400 text-3xl font-bold pl-2 border-l-4 border-green-400">
+                <h4 className="text-green-400 text-2xl lg:text-3xl font-bold pl-2 border-l-4 border-green-400">
                   Formação
                 </h4>
                 <div className="mt-3">
@@ -83,10 +90,10 @@ export default function Resume() {
                 </div>
               </div>
               <div>
-                <h4 className="text-green-400 text-3xl font-bold pl-2 border-l-4 border-green-400">
+                <h4 className="text-green-400 mt-3 md:mt-0 lg:mt-0 text-2xl lg:text-3xl font-bold pl-2 border-l-4 border-green-400">
                   Idiomas
                 </h4>
-                <ul className="list-disc ml-5 p-5">
+                <ul className="list-disc ml-2 p-2">
                   <li>
                     <p>Português(Nativo)</p>
                   </li>
@@ -96,14 +103,14 @@ export default function Resume() {
                 </ul>
               </div>
             </div>
-            <div className="flex flex-col items-start p-5">
+            <div className="flex flex-col items-start md:border-l-1 md:border-bg-gray-100 lg:border-l-1 lg:border-gray-100 md:p-5 lg:p-5">
               <div>
-                <h4 className="text-green-400 text-3xl font-bold pl-2 border-l-4 border-green-400">
+                <h4 className="text-green-400 mt-3 md:mt-0 lg:mt-0 text-2xl lg:text-3xl font-bold pl-2 border-l-4 border-green-400">
                   Habilidades
                 </h4>
                 <div className="mt-3">
                   <h5 className="font-bold">Técnica</h5>
-                  <ul className="list-disc ml-5 p-5">
+                  <ul className="list-disc ml-2 p-2">
                     <li>
                       <p>TypeScript/React/Vue.js/Next.js</p>
                     </li>
@@ -126,8 +133,10 @@ export default function Resume() {
                 </div>
 
                 <div>
-                  <h5 className="font-bold">Profissional</h5>
-                  <ul className="list-disc ml-5 p-5">
+                  <h5 className="font-bold mt-3 md:mt-0 lg:mt-0">
+                    Profissional
+                  </h5>
+                  <ul className="list-disc ml-2 p-2">
                     <li>
                       <p>Trabalho em equipe</p>
                     </li>

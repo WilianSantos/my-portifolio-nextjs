@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default function Contact() {
   return (
-    <main className="h-screen overflow-y-scroll pr-2.5 pl-2.5 pt-10 pb-10 w-full">
+    <main className="h-screen mt-20 lg:mt-0 overflow-y-scroll pr-2.5 pl-2.5 pt-10 pb-10 w-full">
       <div className="flex flex-col items-center justify-center mb-10">
         <div className="flex flex-col items-center justify-center p-5 pb-10 text-lg">
           <h3 className="text-3xl mb-3 font-extrabold">Projetos</h3>
@@ -40,8 +40,8 @@ export default function Contact() {
           <h3 className="text-5xl p-4 border-l-4 border-green-400 font-extrabold mt-10">
             Detalhes do contato
           </h3>
-          <ul className="flex items-center justify-between w-full">
-            <li className="p-5 flex items-center justify-between border-l-2 border-green-400 ">
+          <ul className="flex flex-wrap items-center justify-between w-full">
+            <li className="p-5 mb-5 flex items-center justify-between border-l-2 border-green-400 ">
               <Icon
                 icon="mdi:cellphone"
                 className="h-15 w-15 text-green-400 mr-5"
@@ -51,7 +51,7 @@ export default function Contact() {
                 <p className="text-base mt-2">+55 (19) 97133-0046</p>
               </div>
             </li>
-            <li className="p-5 flex items-center justify-between gap-2 border-l-2 border-green-400">
+            <li className="p-5 mb-5 flex items-center justify-between gap-2 border-l-2 border-green-400">
               <Icon
                 icon="mdi:map-marker"
                 className="h-15 w-15 text-green-400 mr-5"
@@ -63,7 +63,7 @@ export default function Contact() {
                 </p>
               </div>
             </li>
-            <li className="p-5 flex items-center justify-between gap-2 border-l-2 border-green-400 ">
+            <li className="p-5 mb-5 flex items-center justify-between gap-2 border-l-2 border-green-400 ">
               <Icon
                 icon="mdi:email-open-outline"
                 className="h-15 w-15 text-green-400 mr-5"

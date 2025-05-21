@@ -55,7 +55,7 @@ export function ContactForm() {
         {({ isSubmitting }) => (
           <Form className="space-y-4 flex flex-col items-start text-bule-400">
             {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
-            <div className="flex items-center justify-between gap-5 w-full">
+            <div className="flex items-center flex-wrap justify-between gap-5 w-full">
               <div className="w-full">
                 <Field
                   type="text"
@@ -72,27 +72,27 @@ export function ContactForm() {
 
               <div className="w-full">
                 <Field
-                  type="email"
-                  name="email"
-                  placeholder="Seu e-mail"
+                  type="tel"
+                  name="tell"
+                  placeholder="Seu telefone"
                   className="w-full p-2 border border-gray-300 rounded"
                 />
                 <ErrorMessage
-                  name="email"
+                  name="tell"
                   component="div"
                   className="text-red-500 text-sm mt-1"
                 />
               </div>
             </div>
-            <div className="w-1/3">
+            <div className="w-full">
               <Field
-                type="tel"
-                name="tell"
-                placeholder="Seu telefone"
+                type="email"
+                name="email"
+                placeholder="Seu e-mail"
                 className="w-full p-2 border border-gray-300 rounded"
               />
               <ErrorMessage
-                name="tell"
+                name="email"
                 component="div"
                 className="text-red-500 text-sm mt-1"
               />

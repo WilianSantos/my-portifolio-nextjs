@@ -5,10 +5,7 @@ import { Card } from './ui/Card'
 
 export function Skills() {
   return (
-    <section
-      id="skills"
-      className="flex flex-col w-full items-start pb-30 mt-30 border-b-1 border-gray-300"
-    >
+    <section className="flex flex-col w-full items-start pb-30 mt-30 border-b-1 border-gray-300">
       <h3 className="text-5xl font-extrabold border-l-4 mb-3 pl-2 border-green-400">
         Sou Front-end e Back-end
       </h3>
@@ -21,7 +18,7 @@ export function Skills() {
           .
         </p>
       </div>
-      <ul className="grid grid-cols-4 w-full gap-1 mt-6">
+      <ul className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 w-full gap-1 mt-6">
         {/* Linguagens */}
         <li className="h-60 w-full">
           <Card>

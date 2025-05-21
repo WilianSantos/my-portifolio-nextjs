@@ -11,13 +11,22 @@ import profileImage from '@/assets/images/foto.jpg'
 
 export function Banner() {
   return (
-    <section
-      id="banner"
-      className="h-screen flex w-full items-center justify-between border-b-1 border-gray-300 overflow-hidden"
-    >
+    <section className="flex flex-col lg:flex-row w-full items-center justify-between border-b-1 border-gray-300 overflow-hidden">
       <div className="text-lg max-w-8/12 w-full flex flex-col gap-3">
-        <p className="text-3xl">Olá, sou</p>
-        <h2 className="text-5xl font-extrabold text-green-400">
+        <p className="hidden sm:hidden md:block lg:block text-3xl">Olá, sou</p>
+        <p className="block md:hidden lg:hidden text-2xl">Olá, sou</p>
+        <h2 className="hidden sm:hidden md:hidden lg:block text-5xl h-30 font-extrabold text-green-400">
+          <Typewriter
+            words={['Desenvolvedor Full-Stack']}
+            loop
+            cursor
+            cursorStyle="|"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+          />
+        </h2>
+        <h2 className="block h-20 lg:hidden text-4xl font-extrabold text-green-400">
           <Typewriter
             words={['Desenvolvedor Full-Stack']}
             loop
@@ -48,7 +57,7 @@ export function Banner() {
           </Button>
         </div>
       </div>
-      <div className="relative w-80 h-90 mr-3">
+      <div className="relative w-80 h-90 mt-5 mb-3 lg:mr-3">
         {/* Fundo animado atrás */}
         <div className="absolute inset-0 z-0 animate-spin-back bg-green-400 rounded-lg" />
 

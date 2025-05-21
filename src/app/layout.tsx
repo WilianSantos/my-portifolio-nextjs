@@ -31,7 +31,7 @@ export default function RootLayout({
       <body
         className={`${nunito.variable} ${rubik.variable} antialiased text-white bg-gray-500 font-nunito`}
       >
-        <div className="flex">
+        <div className="flex relative">
           <Sidebar />
           {children}
         </div>
