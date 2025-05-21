@@ -1,11 +1,8 @@
-'use client'
-
 import Image, { StaticImageData } from 'next/image'
 import { Icon } from '@iconify/react'
+import Link from 'next/link'
 
 import { Tag } from './Tag'
-import Link from 'next/link'
-import { useState } from 'react'
 
 type PropsProject = {
   title: string
@@ -22,14 +19,6 @@ export function Project({
   description,
   github
 }: PropsProject) {
-  const [seeMore, setSeeMore] = useState(false)
-  const getDescription = (text: string) => {
-    if (text.length > 95) {
-      return text.slice(0, 92) + ' ...'
-    }
-    return text
-  }
-
   return (
     <div className="w-full h-full flex flex-col justify-between items-start gap-8">
       <div className="hover:border-green-400 border-1 border-gray-500 p-3">

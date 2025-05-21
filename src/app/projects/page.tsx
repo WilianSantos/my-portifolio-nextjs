@@ -1,10 +1,10 @@
 'use client'
 
-import { Button } from '@/components/ui/Button'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import Link from 'next/link'
 import { useState } from 'react'
 
+import { Button } from '@/components/ui/Button'
 import { Project } from '@/components/ui/Project'
 import { Footer } from '@/components/Footer'
 

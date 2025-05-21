@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Rubik, Nunito } from 'next/font/google'
+
 import './globals.css'
+
 import { Sidebar } from '@/components/Sidebar'
 
 const nunito = Nunito({

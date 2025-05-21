@@ -3,6 +3,7 @@ import { Icon } from '@iconify/react'
 
 import { Project } from './ui/Project'
 import { Button } from './ui/Button'
+
 import { projectsData } from '@/data/data'
 
 export function Projects() {

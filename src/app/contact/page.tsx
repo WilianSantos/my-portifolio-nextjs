@@ -1,7 +1,8 @@
-import { Footer } from '@/components/Footer'
-import { ContactForm } from '@/components/ui/ContactForm'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import Link from 'next/link'
+
+import { ContactForm } from '@/components/ui/ContactForm'
+import { Footer } from '@/components/Footer'
 
 export default function Contact() {
   return (
