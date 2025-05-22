@@ -10,7 +10,7 @@ import { usePathname } from 'next/navigation'
 export function Sidebar() {
   const pathname = usePathname()
   return (
-    <div className="absolute z-20 lg:relative top-0 right-0 left-0 flex flex-col justify-center lg:justify-start p-6 border-t-2 border-gray-200 bg-gray-500 lg:bg-gray-300 h-20 lg:h-screen lg:max-w-2xs w-full">
+    <div className="absolute z-20 lg:relative top-0 right-0 left-0 flex flex-col justify-center lg:justify-start p-6 border-b-2 border-gray-200 bg-gray-500 lg:bg-gray-300 h-20 lg:h-screen lg:max-w-2xs w-full">
       <div className="lg:flex flex-col items-center gap-4 pb-10 border-b-1 border-gray-200 hidden md:hidden sm:hidden">
         <Image
           src={image}
