@@ -1,10 +1,14 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import { Icon } from '@iconify/react'
 
 import image from '@/assets/images/foto.jpg'
+import { usePathname } from 'next/navigation'
 
 export function Sidebar() {
+  const pathname = usePathname()
   return (
     <div className="absolute z-20 lg:relative top-0 right-0 left-0 flex flex-col justify-center lg:justify-start p-6 border-t-2 border-gray-200 bg-gray-500 lg:bg-gray-300 h-20 lg:h-screen lg:max-w-2xs w-full">
       <div className="lg:flex flex-col items-center gap-4 pb-10 border-b-1 border-gray-200 hidden md:hidden sm:hidden">
@@ -40,7 +44,7 @@ export function Sidebar() {
           <li className="hidden sm:hidden md:block lg:block">
             <Link
               href="/"
-              className="flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md"
+              className={`${pathname === '/' && 'bg-green-400'} flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md`}
             >
               <Icon icon="mdi:account" className="w-8 h-8" />
               Sobre
@@ -49,7 +53,7 @@ export function Sidebar() {
           <li className="block sm:block md:hidden lg:hidden">
             <Link
               href="/"
-              className="flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md"
+              className={`${pathname === '/' && 'bg-green-400'} flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md`}
             >
               <Icon icon="mdi:account" className="w-8 h-8" />
             </Link>
@@ -58,7 +62,7 @@ export function Sidebar() {
           <li className="hidden sm:hidden md:block lg:block">
             <Link
               href="/projects"
-              className="flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md"
+              className={`${pathname === '/projects' && 'bg-green-400'} flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md`}
             >
               <Icon icon="mdi:folder-open" className="w-8 h-8" />
               Projetos
@@ -67,7 +71,7 @@ export function Sidebar() {
           <li className="block sm:block md:hidden lg:hidden">
             <Link
               href="/projects"
-              className="flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md"
+              className={`${pathname === '/projects' && 'bg-green-400'} flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md`}
             >
               <Icon icon="mdi:folder-open" className="w-8 h-8" />
             </Link>
@@ -76,7 +80,7 @@ export function Sidebar() {
           <li className="hidden sm:hidden md:block lg:block">
             <Link
               href="/resume"
-              className="flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md"
+              className={`${pathname === '/resume' && 'bg-green-400'} flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md`}
             >
               <Icon icon="mdi:text-account" className="w-8 h-8" />
               Resumo
@@ -85,7 +89,7 @@ export function Sidebar() {
           <li className="block sm:block md:hidden lg:hidden">
             <Link
               href="/resume"
-              className="flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md"
+              className={`${pathname === '/resume' && 'bg-green-400'} flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md`}
             >
               <Icon icon="mdi:text-account" className="w-8 h-8" />
             </Link>
@@ -94,7 +98,7 @@ export function Sidebar() {
           <li className="hidden sm:hidden md:block lg:block">
             <Link
               href="/contact"
-              className="flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md"
+              className={`${pathname === '/contact' && 'bg-green-400'} flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md`}
             >
               <Icon icon="mdi:email" className="w-8 h-8" />
               Contato
@@ -103,7 +107,7 @@ export function Sidebar() {
           <li className="block sm:block md:hidden lg:hidden">
             <Link
               href="/contact"
-              className="flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md"
+              className={`${pathname === '/contact' && 'bg-green-400'} flex gap-2.5 items-center p-2 w-full hover:bg-green-400 rounded-md`}
             >
               <Icon icon="mdi:email" className="w-8 h-8" />
             </Link>

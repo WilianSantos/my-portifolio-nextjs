@@ -57,7 +57,7 @@ export function ContactForm() {
           <Form className="space-y-4 flex flex-col items-start text-bule-400">
             {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
             <div className="flex items-center flex-wrap justify-between gap-5 w-full">
-              <div className="w-full">
+              <div className="w-full lg:w-1/2">
                 <Field
                   type="text"
                   name="name"
@@ -71,7 +71,7 @@ export function ContactForm() {
                 />
               </div>
 
-              <div className="w-full">
+              <div className="w-full lg:w-1/3">
                 <Field
                   type="tel"
                   name="tell"

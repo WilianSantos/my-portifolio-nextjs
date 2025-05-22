@@ -16,7 +16,7 @@ export default function Resume() {
           <Button isGreen>
             <Link
               className="flex gap-2 items-center text-sm"
-              href="/files/Wilian-Soares-dos-Santos-curriculo.pdf"
+              href="/files/wilian-s-santos-curriculo.pdf"
             >
               <Icon icon="mdi:file-pdf-box" className="h-7 w-7" />
               Download PDF
