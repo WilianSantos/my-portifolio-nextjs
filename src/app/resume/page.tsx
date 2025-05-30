@@ -55,17 +55,22 @@ export default function Resume() {
             />
             <div className="w-full md:w-10/12 lg:w-10/12 mt-3 md:ml-3 lg:ml-3 lg:p-5">
               <p>
-                Especializado em aplicações front-end e back-end para web. Sou
-                estudante de programação a mais de 2 anos, não tenho experiencia
-                profissional com programação, tenho me dedicado aos estudos e a
-                pratica com projetos acadêmicos. Atualmente estou cursando
-                Desenvolvedor Full Stack Python, um curso profissionalizante
-                também estou no 3° semestre de Análise e Desenvolvimento de
-                Sistemas, em meus estudos desenvolve habilidades de como
-                programar de forma limpa, sempre aplicando as boas práticas da
-                comunidade. Sou cristão, baterista e um pouco geek, meus hobbies
-                se dividem em ouvir músicas, ler mangas, assistir animes e ler
-                livros.
+                Sou especializado em aplicações front-end e back-end web. Tenho
+                conhecimento em construir paginas web com HTML, CSS e JavaScript
+                simples á paginas com utilização de pré-processadores como SCSS
+                e automatizadores de tarefas como GRUNT, também desenvolvo
+                páginas com frameworks como React.js, Vue.js e Next.js, tenho
+                familiaridade com styled-components, redux e react-query. Com o
+                back-end posso construir API's com Python e Django. Atualmente
+                sou estudante de programação, não tenho experiência profissional
+                com programação, tenho me dedicado aos estudos e a pratica com
+                projetos acadêmicos. Minhas formações é Desenvolvedor Full Stack
+                Python, um curso profissionalizante também estou no 3° semestre
+                de Análise e Desenvolvimento de Sistemas, em meus estudos
+                desenvolve habilidades para programar de forma limpa, sempre
+                aplicando as boas práticas da comunidade. Sou cristão, baterista
+                e um pouco geek, meus hobbies se dividem em ouvir músicas, ler
+                mangas, assistir animes e ler livros.
               </p>
             </div>
           </div>

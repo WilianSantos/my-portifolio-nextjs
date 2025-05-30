@@ -51,7 +51,7 @@ export const projectsData: Project[] = [
   {
     type: 'Front-end',
     title: 'Site de gerenciamento de restaurantes',
-    technologies: ['React', 'React Redux'],
+    technologies: ['React', 'Redux', 'Styled Components'],
     image: efoodImage,
     github: 'https://github.com/WilianSantos/ebac_efood-react.git',
     description:
@@ -63,7 +63,7 @@ export const projectsData: Project[] = [
   {
     type: 'Front-end',
     title: 'Site de venda de jogos',
-    technologies: ['React', 'React Redux'],
+    technologies: ['React', 'Redux', 'Styled Components'],
     image: eplayImage,
     github: 'https://github.com/WilianSantos/ebac_eplay-react.git',
     description:
