@@ -61,7 +61,7 @@ export default function Resume() {
                 e automatizadores de tarefas como GRUNT, também desenvolvo
                 páginas com frameworks como React.js, Vue.js e Next.js, tenho
                 familiaridade com styled-components, redux e react-query. Com o
-                back-end posso construir API's com Python e Django. Atualmente
+                back-end posso construir APIs com Python e Django. Atualmente
                 sou estudante de programação, não tenho experiência profissional
                 com programação, tenho me dedicado aos estudos e a pratica com
                 projetos acadêmicos. Minhas formações é Desenvolvedor Full Stack
