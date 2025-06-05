@@ -56,21 +56,22 @@ export default function Resume() {
             <div className="w-full md:w-10/12 lg:w-10/12 mt-3 md:ml-3 lg:ml-3 lg:p-5">
               <p>
                 Sou especializado em aplicações front-end e back-end web. Tenho
-                conhecimento em construir paginas web com HTML, CSS e JavaScript
-                simples á paginas com utilização de pré-processadores como SCSS
-                e automatizadores de tarefas como GRUNT, também desenvolvo
-                páginas com frameworks como React.js, Vue.js e Next.js, tenho
-                familiaridade com styled-components, redux e react-query. Com o
-                back-end posso construir APIs com Python e Django. Atualmente
-                sou estudante de programação, não tenho experiência profissional
-                com programação, tenho me dedicado aos estudos e a pratica com
-                projetos acadêmicos. Minhas formações é Desenvolvedor Full Stack
-                Python, um curso profissionalizante também estou no 3° semestre
-                de Análise e Desenvolvimento de Sistemas, em meus estudos
-                desenvolve habilidades para programar de forma limpa, sempre
-                aplicando as boas práticas da comunidade. Sou cristão, baterista
-                e um pouco geek, meus hobbies se dividem em ouvir músicas, ler
-                mangas, assistir animes e ler livros.
+                conhecimento em construir páginas web com HTML, CSS e
+                JavaScript, á páginas com utilização de pré-processadores como
+                SCSS e automatizadores de tarefas como GRUNT, também desenvolvo
+                páginas com frameworks como React.js e Next.js, tenho
+                familiaridade com styled-components, redux e react query. Com o
+                back-end construo APIs com Python e Django, utilizando Django
+                Rest. Atualmente sou estudante de programação, não tenho
+                experiência profissional em programação, dedico o meu tempo aos
+                estudos e a pratica com projetos acadêmicos. Minhas formações
+                são Desenvolvedor Full Stack Python, um curso profissionalizante
+                também estou no 3° semestre de Análise e Desenvolvimento de
+                Sistemas, no design de código meu foco é o simples, ou seja, sem
+                complexidade desnecessária, sempre aplicando as boas práticas da
+                comunidade. Sou cristão, baterista e um pouco geek, meus hobbies
+                se dividem em ouvir músicas, ler mangas, assistir animes e ler
+                livros.
               </p>
             </div>
           </div>
