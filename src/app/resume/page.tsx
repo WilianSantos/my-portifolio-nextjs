@@ -55,20 +55,21 @@ export default function Resume() {
             />
             <div className="w-full md:w-10/12 lg:w-10/12 mt-3 md:ml-3 lg:ml-3 lg:p-5">
               <p>
-                Sou especializado em aplicações front-end e back-end web. Tenho
-                conhecimento em construir páginas web com HTML, CSS e
-                JavaScript, tenho conhecimento em pré-processadores como SCSS e
-                automatizadores de tarefas como GRUNT, também desenvolvo páginas
-                com frameworks como React.js e Next.js, tenho familiaridade com
-                styled-components, redux e react query. Com o back-end construo
-                APIs com Python e Django, utilizando Django Rest. Atualmente sou
-                estudante de programação, não tenho experiência profissional em
-                programação, dedico o meu tempo aos estudos e a pratica com
-                projetos acadêmicos. Minhas formações são Desenvolvedor Full
-                Stack Python, um curso profissionalizante também estou no 5°
-                semestre de Análise e Desenvolvimento de Sistemas, no design de
-                código meu foco é o simples e funcional, sempre aplicando as
-                boas práticas da comunidade.
+                Sou especializado no desenvolvimento de aplicações web front-end
+                e back-end. Tenho conhecimento na construção de páginas com
+                HTML, CSS e JavaScript, e experiência com pré-processadores como
+                SCSS e automatizadores de tarefas como Grunt. No front-end,
+                trabalho com frameworks como React.js e Next.js, além de possuir
+                familiaridade com styled-components, Redux e React Query. No
+                back-end, desenvolvo APIs RESTful utilizando Python e Django,
+                com foco em boas práticas usando o Django REST Framework.
+                Atualmente sou estudante de programação, no 5º semestre de
+                Análise e Desenvolvimento de Sistemas, e também em um curso
+                profissionalizante de Desenvolvedor Full Stack Python. Embora
+                ainda não tenha experiência profissional na área, dedico meu
+                tempo ao estudo constante e ao desenvolvimento de projetos
+                próprios e acadêmicos. Busco sempre escrever código limpo,
+                simples e funcional, seguindo as boas práticas da comunidade.
               </p>
             </div>
           </div>
